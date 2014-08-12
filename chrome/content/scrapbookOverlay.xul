@@ -6,17 +6,7 @@
 <overlay id="sbautosaveSidebarOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript"><![CDATA[
-		function sbAutoSave_onPopupShowing()
-		{
-			var enabled = sbCommonUtils.getBoolPref("scrapbook.autosave.enabled", true);
-			document.getElementById("sbAutoSaveMenu").setAttribute("checked", enabled);
-		}
-		function sbAutoSave_toggle(aEnable)
-		{
-			sbCommonUtils.setBoolPref("scrapbook.autosave.enabled", aEnable);
-		}
-	]]></script>
+	<script type="application/x-javascript" src="chrome://sbautosave/content/scrapbookOverlay.js" />
 
 	<menu id="sbAddOns" hidden="false">
 		<menupopup id="sbAddOnsPopup" onpopupshowing="sbAutoSave_onPopupShowing();">
