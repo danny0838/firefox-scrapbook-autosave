@@ -1,22 +1,31 @@
-var sbAutoSaveCommon = {
+(function(){
+    var PREF = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.scrapbook.addon.autosave.");
 
-    checkCompatibility : function()
-    {
-        return ("sbCommonUtils" in window) && ("newItem" in sbCommonUtils);
-    },
+    window.sbAutoSaveUtils = {
+        getBoolPref : function(aName, aDefaultValue)
+        {
+            try {
+                return PREF.getBoolPref(aName);
+            } catch(ex) {
+                return aDefaultValue;
+            }
+        },
 
-    getBoolPref : function(aName, aDefaultValue)
-    {
-        return sbCommonUtils.getBoolPref("extensions.scrapbook.addon.autosave." + aName, aDefaultValue);
-    },
+        setBoolPref : function (aName, aValue)
+        {
+            PREF.setBoolPref(aName, aValue);
+        },
 
-    setBoolPref : function (aName, aValue)
-    {
-        sbCommonUtils.setBoolPref("extensions.scrapbook.addon.autosave." + aName, aValue);
-    },
+        copyUnicharPref : function(aName, aDefaultValue)
+        {
+            try {
+                return PREF.getComplexValue(aName, Components.interfaces.nsISupportsString).data;
+            } catch(ex) {
+                return aDefaultValue;
+            }
+        },
+    };
 
-    copyUnicharPref : function(aName, aDefaultValue)
-    {
-        return sbCommonUtils.copyUnicharPref("extensions.scrapbook.addon.autosave." + aName, aDefaultValue);
-    },
-};
+    window.sbAutoSaveCommon = ("ScrapBookUtils" in window) ? ScrapBookUtils : sbCommonUtils;
+    window.sbAutoSaveData = ("ScrapBookData" in window) ? ScrapBookData : sbDataSource;
+})();
