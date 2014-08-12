@@ -23,6 +23,7 @@
             <preference id="extensions.scrapbook.addon.autosave.styles" name="extensions.scrapbook.addon.autosave.styles" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.script" name="extensions.scrapbook.addon.autosave.script" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.ignore" name="extensions.scrapbook.addon.autosave.ignore" type="bool" />
+            <preference id="extensions.scrapbook.addon.autosave.include" name="extensions.scrapbook.addon.autosave.include" type="string" />
             <preference id="extensions.scrapbook.addon.autosave.exclude" name="extensions.scrapbook.addon.autosave.exclude" type="string" />
         </preferences>
         <!--UI-->
@@ -33,6 +34,8 @@
             <checkbox id="sbAutoSavePrefIgnore" preference="extensions.scrapbook.addon.autosave.ignore" label="Ignore Errors" />
         </hbox>
         <vbox>
+            <label value="Include URLs Matching RegExp:" control="sbAutoSavePrefInclude"/>
+            <textbox id="sbAutoSavePrefInclude" preference="extensions.scrapbook.addon.autosave.include" multiline="true" size="30" />
             <label value="Exclude URLs Matching RegExp:" control="sbAutoSavePrefExclude"/>
             <textbox id="sbAutoSavePrefExclude" preference="extensions.scrapbook.addon.autosave.exclude" multiline="true" size="30" />
         </vbox>

@@ -37,6 +37,18 @@ var sbAutoSaveService = {
             return;
         }
 
+        var included = sbAutoSaveUtils.copyUnicharPref("include", "").match(/\S/) ? false : true;
+        sbAutoSaveUtils.copyUnicharPref("include", "").split("\n").forEach(function(include){
+            if (!include) return;
+            try {
+                var regex = new RegExp(include, "i");
+                if (win.location.href.search(regex) >= 0) {
+                    included = true;
+                }
+            } catch(ex) {}
+        }, this);
+        if (!included) return;
+
         var excluded = false;
         sbAutoSaveUtils.copyUnicharPref("exclude", "").split("\n").forEach(function(exclude){
             if (!exclude) return;
