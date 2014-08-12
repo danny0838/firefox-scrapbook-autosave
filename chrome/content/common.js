@@ -1,5 +1,10 @@
 var sbAutoSaveCommon = {
 
+    checkCompatibility : function()
+    {
+        return ("sbCommonUtils" in window) && ("newItem" in sbCommonUtils);
+    },
+
     getBoolPref : function(aName, aDefaultValue)
     {
         return sbCommonUtils.getBoolPref("extensions.scrapbook.addon.autosave." + aName, aDefaultValue);

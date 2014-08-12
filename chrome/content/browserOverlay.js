@@ -10,9 +10,9 @@ var sbAutoSaveService = {
 
 	init : function()
 	{
-		if ( !("newItem" in sbCommonUtils) )
+		if ( !sbAutoSaveCommon.checkCompatibility )
 		{
-			setTimeout(function(){ alert("Please upgrade ScrapBook to 1.2 or later."); }, 1000);
+			setTimeout(function(){ alert("Your ScrapBook version installed is not compatible with ScrapBook X AutoSave."); }, 1000);
 			return;
 		}
 		gBrowser.addEventListener("load", function(aEvent){ sbAutoSaveService.handleBrowserLoad(aEvent); }, true);
