@@ -2,5 +2,7 @@ Scrapbook X AutoSave 1.4.1
 ----------------
 
 - COMPATIBLE WITH: ScrapBook X 1.12.0a24, ScrapBook Plus 1.9.24.40b3, ScrapBook 1.5.9
+- NEW: Supports URL include patterns.
+- NEW: Supports multiple URL exclude patterns.
 - UPDATE: Moved preferences to "extensions.scrapbook.addon.autosave.*"
-- FIXED: Supports ScrapBook X API.
+- UPDATE: Supports ScrapBook X API.
