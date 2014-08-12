@@ -20,7 +20,7 @@ var sbAutoSaveService = {
 
 	handleBrowserLoad : function(aEvent)
 	{
-		if ( !sbCommonUtils.getBoolPref("scrapbook.autosave.enabled", true) ) {
+		if ( !sbAutoSaveCommon.getBoolPref("enabled", true) ) {
 			return;
 		}
 
@@ -43,7 +43,7 @@ var sbAutoSaveService = {
 		}
 
 		try {
-			var exclude = sbCommonUtils.PREF.getCharPref("scrapbook.autosave.exclude");
+			var exclude = sbAutoSaveCommon.copyUnicharPref("exclude", "");
 			if (exclude != "") {
 				var regex = new RegExp(exclude, "i");
 				if (win.location.href.search(regex) >= 0) {
@@ -83,15 +83,15 @@ var sbAutoSaveService = {
 			null,
 			null,
 			{
-				"images" : sbCommonUtils.getBoolPref("scrapbook.autosave.images", true),
-				"styles" : sbCommonUtils.getBoolPref("scrapbook.autosave.styles", true),
-				"script" : sbCommonUtils.getBoolPref("scrapbook.autosave.script", false)
+				"images" : sbAutoSaveCommon.getBoolPref("images", true),
+				"styles" : sbAutoSaveCommon.getBoolPref("styles", true),
+				"script" : sbAutoSaveCommon.getBoolPref("script", false)
 			},
 			null,
 			null
 		];
 
-		if (sbCommonUtils.getBoolPref("scrapbook.autosave.ignore", false)) {
+		if (sbAutoSaveCommon.getBoolPref("ignore", false)) {
 			var sv = window.alert;
 			try {
 				window.alert = function(s){ return s; };

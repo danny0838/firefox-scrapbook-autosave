@@ -19,21 +19,21 @@
 	<prefpane id="sbAutoSavePrefPane" flex="1">
 		<!--prefs-->
 		<preferences>
-			<preference id="scrapbook.autosave.images" name="scrapbook.autosave.images" type="bool" />
-			<preference id="scrapbook.autosave.styles" name="scrapbook.autosave.styles" type="bool" />
-			<preference id="scrapbook.autosave.script" name="scrapbook.autosave.script" type="bool" />
-			<preference id="scrapbook.autosave.ignore" name="scrapbook.autosave.ignore" type="bool" />
-			<preference id="scrapbook.autosave.exclude" name="scrapbook.autosave.exclude" type="string" />
+			<preference id="extensions.scrapbook.addon.autosave.images" name="extensions.scrapbook.addon.autosave.images" type="bool" />
+			<preference id="extensions.scrapbook.addon.autosave.styles" name="extensions.scrapbook.addon.autosave.styles" type="bool" />
+			<preference id="extensions.scrapbook.addon.autosave.script" name="extensions.scrapbook.addon.autosave.script" type="bool" />
+			<preference id="extensions.scrapbook.addon.autosave.ignore" name="extensions.scrapbook.addon.autosave.ignore" type="bool" />
+			<preference id="extensions.scrapbook.addon.autosave.exclude" name="extensions.scrapbook.addon.autosave.exclude" type="string" />
 		</preferences>
 		<!--UI-->
 		<hbox align="center" flex="1">
-			<checkbox id="sbAutoSavePrefImages" preference="scrapbook.autosave.images" label="&sb.detail.option.images;" />
-			<checkbox id="sbAutoSavePrefStyles" preference="scrapbook.autosave.styles" label="&sb.detail.option.styles;" />
-			<checkbox id="sbAutoSavePrefScript" preference="scrapbook.autosave.script" label="JavaScript" />
-			<checkbox id="sbAutoSavePrefIgnore" preference="scrapbook.autosave.ignore" label="Ignore Errors" />
+			<checkbox id="sbAutoSavePrefImages" preference="extensions.scrapbook.addon.autosave.images" label="&sb.detail.option.images;" />
+			<checkbox id="sbAutoSavePrefStyles" preference="extensions.scrapbook.addon.autosave.styles" label="&sb.detail.option.styles;" />
+			<checkbox id="sbAutoSavePrefScript" preference="extensions.scrapbook.addon.autosave.script" label="JavaScript" />
+			<checkbox id="sbAutoSavePrefIgnore" preference="extensions.scrapbook.addon.autosave.ignore" label="Ignore Errors" />
 		</hbox>
 		<hbox align="center" flex="1">
-			<label value="Exclude URLs Matching:" control="sbAutoSavePrefExclude"/> <textbox id="sbAutoSavePrefExclude" preference="scrapbook.autosave.exclude" size="30" />
+			<label value="Exclude URLs Matching:" control="sbAutoSavePrefExclude"/> <textbox id="sbAutoSavePrefExclude" preference="extensions.scrapbook.addon.autosave.exclude" size="30" />
 		</hbox>
 	</prefpane>
 
