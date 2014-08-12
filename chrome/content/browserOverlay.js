@@ -37,16 +37,17 @@ var sbAutoSaveService = {
             return;
         }
 
-        try {
-            var exclude = sbAutoSaveUtils.copyUnicharPref("exclude", "");
-            if (exclude != "") {
+        var excluded = false;
+        sbAutoSaveUtils.copyUnicharPref("exclude", "").split("\n").forEach(function(exclude){
+            if (!exclude) return;
+            try {
                 var regex = new RegExp(exclude, "i");
                 if (win.location.href.search(regex) >= 0) {
-                    return;
+                    excluded = true;
                 }
-            }
-        }
-        catch(ex) {}
+            } catch(ex) {}
+        }, this);
+        if (excluded) return;
 
         var ts = sbAutoSaveCommon.getTimeStamp();
         var monthStamp = ts.substring(0,6) + "00000000";
