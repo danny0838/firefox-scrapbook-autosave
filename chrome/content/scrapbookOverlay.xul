@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--locale-->
+<!DOCTYPE overlay SYSTEM "chrome://sbautosave/locale/sbautosave.dtd">
+
+<overlay id="sbautosaveSidebarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="chrome://sbautosave/content/common.js" />
+    <script type="application/x-javascript" src="chrome://sbautosave/content/scrapbookOverlay.js" />
+
+    <menu id="sbAddOns" hidden="false">
+        <menupopup id="sbAddOnsPopup" onpopupshowing="sbAutoSave_onPopupShowing();">
+            <menuitem id="sbAutoSaveMenu" type="checkbox" label="&sbautosave;"   oncommand="sbAutoSave_toggle(this.getAttribute('checked') == 'true');" />
+            <menuitem id="sbAutoSaveOptionsMenu" label="&sbautosave.options;..." oncommand="window.openDialog('chrome://sbautosave/content/options.xul','AutoSave:Options','chrome,centerscreen');" />
+        </menupopup>
+    </menu>
+
+</overlay>

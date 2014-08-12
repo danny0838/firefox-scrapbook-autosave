@@ -1,0 +1,12 @@
+overlay chrome://navigator/content/navigator.xul chrome://sbautosave/content/browserOverlay.xul
+overlay	chrome://browser/content/browser.xul	chrome://sbautosave/content/browserOverlay.xul
+overlay chrome://scrapbook/content/scrapbook.xul	chrome://sbautosave/content/scrapbookOverlay.xul
+content	sbautosave	chrome/content/
+
+locale	sbautosave	en-US	chrome/locale/en-US/
+locale	sbautosave	ja-JP	chrome/locale/ja-JP/
+locale	sbautosave	ru-RU	chrome/locale/ru-RU/
+locale	sbautosave	fr-FR	chrome/locale/fr-FR/
+locale	sbautosave	hu-HU	chrome/locale/hu-HU/
+locale	sbautosave	zh-TW	chrome/locale/zh-TW/
+

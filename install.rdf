@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 	<Description about="urn:mozilla:install-manifest">
-		<em:id>autosaveimproved@scrapbook.mozdev.org</em:id>
+		<em:id>scrapbookx.autosave@addons.mozilla.org</em:id>
 		<em:type>2</em:type>
-		<em:name>ScrapBook AutoSave Improved</em:name>
-		<em:version>1.4.0</em:version>
-		<em:description>ScrapBook AutoSave Add-on, with some extra features.</em:description>
-		<em:creator>Feng Qiu</em:creator>
+		<em:name>ScrapBook X AutoSave</em:name>
+		<em:version>1.4.1</em:version>
+		<em:description>Automatically saves web page on browsing.</em:description>
+		<em:creator>Danny Lin</em:creator>
+		<em:developer>Feng Qiu</em:developer>
 		<em:iconURL>chrome://scrapbook/skin/main_32.png</em:iconURL>
 		<em:optionsURL>chrome://sbautosave/content/options.xul</em:optionsURL>
-		<em:homepageURL>https://github.com/ban90/ScrapBook-AutoSave-Improved</em:homepageURL>
+		<em:homepageURL>https://github.com/danny0838/scrapbook-autosave</em:homepageURL>
 		<em:targetApplication>
 			<Description>
-				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>2.0</em:minVersion>
-				<em:maxVersion>4.0.*</em:maxVersion>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>32.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
         <em:targetApplication>
