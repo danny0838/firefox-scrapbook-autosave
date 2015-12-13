@@ -20,6 +20,8 @@
         <!--prefs-->
         <preferences>
             <preference id="extensions.scrapbook.addon.autosave.images" name="extensions.scrapbook.addon.autosave.images" type="bool" />
+            <preference id="extensions.scrapbook.addon.autosave.media" name="extensions.scrapbook.addon.autosave.media" type="bool" />
+            <preference id="extensions.scrapbook.addon.autosave.fonts" name="extensions.scrapbook.addon.autosave.fonts" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.styles" name="extensions.scrapbook.addon.autosave.styles" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.script" name="extensions.scrapbook.addon.autosave.script" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.ignore" name="extensions.scrapbook.addon.autosave.ignore" type="bool" />
@@ -28,8 +30,10 @@
         </preferences>
         <!--UI-->
         <hbox align="center" flex="1">
-            <checkbox id="sbAutoSavePrefImages" preference="extensions.scrapbook.addon.autosave.images" label="&sb.detail.option.images;" />
-            <checkbox id="sbAutoSavePrefStyles" preference="extensions.scrapbook.addon.autosave.styles" label="&sb.detail.option.styles;" />
+            <checkbox id="sbAutoSavePrefImages" preference="extensions.scrapbook.addon.autosave.images" label="Images" />
+            <checkbox id="sbAutoSavePrefMedia" preference="extensions.scrapbook.addon.autosave.media" label="Media" />
+            <checkbox id="sbAutoSavePrefFonts" preference="extensions.scrapbook.addon.autosave.fonts" label="Fonts" />
+            <checkbox id="sbAutoSavePrefStyles" preference="extensions.scrapbook.addon.autosave.styles" label="Styles" />
             <checkbox id="sbAutoSavePrefScript" preference="extensions.scrapbook.addon.autosave.script" label="JavaScript" />
             <checkbox id="sbAutoSavePrefIgnore" preference="extensions.scrapbook.addon.autosave.ignore" label="Ignore Errors" />
         </hbox>

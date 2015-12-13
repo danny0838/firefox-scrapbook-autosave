@@ -92,6 +92,9 @@ var sbAutoSaveService = {
             null,
             {
                 "images" : sbAutoSaveUtils.getBoolPref("images", true),
+                "media" : sbAutoSaveUtils.getBoolPref("images", true),
+                "fonts" : sbAutoSaveUtils.getBoolPref("fonts", true),
+                "frames" : sbAutoSaveUtils.getBoolPref("frames", true),
                 "styles" : sbAutoSaveUtils.getBoolPref("styles", true),
                 "script" : sbAutoSaveUtils.getBoolPref("script", false)
             },
