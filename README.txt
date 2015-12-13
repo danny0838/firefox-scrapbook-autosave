@@ -4,11 +4,11 @@ ScrapBook X AutoSave automatically saves any page that is currently browsed once
 
 See also:
 
-Documentation Wiki / Download:
-http://github.com/danny0838/firefox-scrapbook-autosave/wiki
+Firefox addon page:
+https://addons.mozilla.org/firefox/addon/scrapbookx-autosave/
 
 Project repository:
 http://github.com/danny0838/firefox-scrapbook-autosave
 
-Original (ScrapBook AutoSave Improved) Firefox addon page:
-http://addons.mozilla.org/firefox/addon/scrapbook-autosave-improved/
+Documentation Wiki:
+http://github.com/danny0838/firefox-scrapbook-autosave/wiki

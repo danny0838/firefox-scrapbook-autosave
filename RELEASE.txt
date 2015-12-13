@@ -1,3 +1,10 @@
+Scrapbook X AutoSave 1.4.2
+----------------
+- COMPATIBLE WITH: ScrapBook X 1.12.11, ScrapBook Plus 1.9.24.40b3, ScrapBook 1.5.13
+- FIX: Cannot work with ScrapBook correctly.
+- UPDATE: Add several capture options added in ScrapBook X.
+
+
 Scrapbook X AutoSave 1.4.1
 ----------------
 
