@@ -67,7 +67,7 @@ var sbAutoSaveService = {
         var fItem, fRes;
         if ( !sbAutoSaveData.exists(sbAutoSaveCommon.RDF.GetResource(DirURI)) )
         {
-            fItem = sbAutoSaveCommon.newItem(monthStamp);
+            fItem = sbAutoSaveUtils.newItem(monthStamp);
             monthStamp.match(/^(\d{4})(\d{2})\d{8}$/);
             fItem.title = RegExp.$1 + "/" + RegExp.$2;
             fItem.type = "folder";
@@ -79,7 +79,7 @@ var sbAutoSaveService = {
         var targetURI = "urn:scrapbook:item" + timeStamp;
         if ( !sbAutoSaveData.exists(sbAutoSaveCommon.RDF.GetResource(targetURI)) )
         {
-            fItem = sbAutoSaveCommon.newItem(timeStamp);
+            fItem = sbAutoSaveUtils.newItem(timeStamp);
             timeStamp.match(/^(\d{4})(\d{2})(\d{2})\d{6}$/);
             fItem.title = (new Date(parseInt(RegExp.$1, 10), parseInt(RegExp.$2, 10) - 1, parseInt(RegExp.$3, 10))).toLocaleDateString();
             fItem.type = "folder";

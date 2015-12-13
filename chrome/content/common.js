@@ -24,6 +24,12 @@
                 return aDefaultValue;
             }
         },
+        
+        newItem : function(aID)
+        {
+            if (sbAutoSaveCommon.newItem) return sbAutoSaveCommon.newItem(aID);
+            return { id : aID || "", type : "", title : "", chars : "", icon : "", source : "", comment : "" };
+        },
     };
 
     window.sbAutoSaveCommon = ("ScrapBookUtils" in window) ? ScrapBookUtils : sbCommonUtils;
