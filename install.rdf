@@ -3,7 +3,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>scrapbookx.autosave@addons.mozilla.org</em:id>
         <em:type>2</em:type>
-        <em:version>1.4.2</em:version>
+        <em:version>1.4.3</em:version>
 
         <em:name>ScrapBook X AutoSave</em:name>
         <em:description>Automatically saves web page on browsing.</em:description>
@@ -17,7 +17,7 @@
             <Description>
                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
                 <em:minVersion>3.0</em:minVersion>
-                <em:maxVersion>44.*</em:maxVersion>
+                <em:maxVersion>47.*</em:maxVersion>
             </Description>
         </em:targetApplication>
         <em:targetApplication>
