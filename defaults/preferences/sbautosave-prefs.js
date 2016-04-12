@@ -7,3 +7,4 @@ pref("extensions.scrapbook.addon.autosave.script", false);
 pref("extensions.scrapbook.addon.autosave.ignore", false);
 pref("extensions.scrapbook.addon.autosave.include", "");
 pref("extensions.scrapbook.addon.autosave.exclude", "");
+pref("extensions.scrapbook.addon.autosave.delay", 0);
