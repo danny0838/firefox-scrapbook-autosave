@@ -11,6 +11,14 @@
             }
         },
 
+        getIntPref : function(aName, aDefaultValue) {
+            try {
+                return PREF.getIntPref(aName);
+            } catch(ex) {
+                return aDefaultValue;
+            }
+        },
+
         setBoolPref : function (aName, aValue)
         {
             PREF.setBoolPref(aName, aValue);

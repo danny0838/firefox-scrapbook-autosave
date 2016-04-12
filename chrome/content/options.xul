@@ -27,6 +27,7 @@
             <preference id="extensions.scrapbook.addon.autosave.ignore" name="extensions.scrapbook.addon.autosave.ignore" type="bool" />
             <preference id="extensions.scrapbook.addon.autosave.include" name="extensions.scrapbook.addon.autosave.include" type="string" />
             <preference id="extensions.scrapbook.addon.autosave.exclude" name="extensions.scrapbook.addon.autosave.exclude" type="string" />
+            <preference id="extensions.scrapbook.addon.autosave.delay" name="extensions.scrapbook.addon.autosave.delay" type="int" />
         </preferences>
         <!--UI-->
         <hbox align="center" flex="1">
@@ -42,6 +43,8 @@
             <textbox id="sbAutoSavePrefInclude" preference="extensions.scrapbook.addon.autosave.include" multiline="true" size="30" />
             <label value="Exclude URLs Matching RegExp (separated by lines):" control="sbAutoSavePrefExclude"/>
             <textbox id="sbAutoSavePrefExclude" preference="extensions.scrapbook.addon.autosave.exclude" multiline="true" size="30" />
+            <label value="Capture Delay (milliseconds):" />
+            <textbox type="number" value="0" min="0" preference="extensions.scrapbook.addon.autosave.delay"/>
         </vbox>
     </prefpane>
 

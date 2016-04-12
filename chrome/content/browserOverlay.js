@@ -10,20 +10,29 @@ var sbAutoSaveService = {
 
     init : function()
     {
-        gBrowser.addEventListener("load", function(aEvent){ sbAutoSaveService.handleBrowserLoad(aEvent); }, true);
+        gBrowser.addEventListener("load", function(aEvent){
+            if ( !sbAutoSaveUtils.getBoolPref("enabled", true) ) {
+                return;
+            }
+
+            var win = aEvent.originalTarget.defaultView;
+            if ( win != win.top ) {
+                return;
+            }
+
+            var delay = sbAutoSaveUtils.getIntPref("delay", 0);
+            if (delay) {
+                setTimeout(function () {
+                    sbAutoSaveService.capturePage(win);
+                }, delay);
+            } else {
+                sbAutoSaveService.capturePage(win);
+            }
+        }, true);
     },
 
-    handleBrowserLoad : function(aEvent)
+    capturePage : function(win)
     {
-        if ( !sbAutoSaveUtils.getBoolPref("enabled", true) ) {
-            return;
-        }
-
-        var win = aEvent.originalTarget.defaultView;
-        if ( win != win.top ) {
-            return;
-        }
-
         var url = win.location.href;
         var idx = url.indexOf('#');
         if (idx >= 0) {
