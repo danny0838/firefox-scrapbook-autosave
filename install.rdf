@@ -11,7 +11,7 @@
         <em:developer>Feng Qiu</em:developer>
         <em:iconURL>chrome://scrapbook/skin/main_32.png</em:iconURL>
         <em:optionsURL>chrome://sbautosave/content/options.xul</em:optionsURL>
-        <em:homepageURL>https://github.com/danny0838/scrapbook-autosave</em:homepageURL>
+        <em:homepageURL>https://addons.mozilla.org/firefox/addon/scrapbookx-autosave/</em:homepageURL>
 
         <em:targetApplication>
             <Description>
